@@ -5,17 +5,11 @@
 require __DIR__.'/vendor/autoload.php';
 
 use Symfony\Component\Console\Application;
-use Symfony\Component\Console\Input\InputInterface;
-use Symfony\Component\Console\Output\OutputInterface;
+use Citrus\SayHiCommand;
 
-$app = new Application();
 
-$app->register('sayHi')
-     ->addArgument('name')
-     ->setCode(function(InputInterface $input, OutputInterface $output) {
+$app = new Application('Letus','1.0');
 
-         $output->writeln('Hello World');
-
-     });
+$app->add(new SayHiCommand);
      
 $app->run();
