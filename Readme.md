@@ -1,0 +1,3 @@
+# Letus
+Letus is a php command-line application that is built off symfony's console component.
+More ideas coming up ....
