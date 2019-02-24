@@ -5,11 +5,11 @@
 require __DIR__.'/vendor/autoload.php';
 
 use Symfony\Component\Console\Application;
-use Citrus\SayHiCommand;
+use Citrus\NewCommand;
 
 
 $app = new Application('Letus','1.0');
 
-$app->add(new SayHiCommand);
+$app->add(new NewCommand(new GuzzleHttp\Client));
      
 $app->run();
