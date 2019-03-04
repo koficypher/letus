@@ -6,10 +6,14 @@ require __DIR__.'/vendor/autoload.php';
 
 use Symfony\Component\Console\Application;
 use Citrus\RenderCommand;
+use Citrus\NewCommand;
+use Citrus\SayHiCommand;
 
 
 $app = new Application('Letus','1.0');
 
 $app->add(new RenderCommand);
+$app->add(new NewCommand(new GuzzleHttp\Client));
+$app->add(new SayHiCommand);
      
 $app->run();
